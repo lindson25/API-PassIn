@@ -29,7 +29,7 @@ SET FILES NIO TRUE
 SET FILES NIO SIZE 256
 SET FILES LOG TRUE
 SET FILES LOG SIZE 50
-SET FILES CHECK 4039
+SET FILES CHECK 4361
 SET DATABASE COLLATION "SQL_TEXT" PAD SPACE
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
@@ -58,7 +58,3 @@ INSERT INTO "flyway_schema_history" VALUES(1,'1','create-table-events','SQL','V1
 INSERT INTO "flyway_schema_history" VALUES(2,'2','create-table-attendees','SQL','V2__create-table-attendees.sql',1911608110,'SA','2024-04-03 16:17:40.926746',29,'1')
 INSERT INTO "flyway_schema_history" VALUES(3,'3','create-table-checkins','SQL','V3__create-table-checkins.sql',-52053718,'SA','2024-04-03 16:17:40.970726',2,'1')
 INSERT INTO "flyway_schema_history" VALUES(4,'4','create-indexes','SQL','V4__create-indexes.sql',-781485658,'SA','2024-04-03 16:17:40.992710',1,'1')
-INSERT INTO EVENTS VALUES('d14c87d7-2fd2-4b29-9371-05e384ba5e9d','Rocketseat NLW Unite','Aprenda v\u00e1rias tecnologias de forma gratuita e online!','rocketseatnlwunite',2)
-INSERT INTO ATTENDEES VALUES('bac254ca-a2cd-4c4e-8c82-44889b2d2ff0','Lindson2','lindson@email.com2','d14c87d7-2fd2-4b29-9371-05e384ba5e9d','2024-04-04 21:51:58.991373')
-INSERT INTO ATTENDEES VALUES('fbd1af0c-e5a4-438f-b9d2-bd26c9a71565','Lindson','lindson@email.com','d14c87d7-2fd2-4b29-9371-05e384ba5e9d','2024-04-04 21:51:37.836538')
-INSERT INTO CHECK_INS VALUES(4,'2024-04-04 21:53:03.139059','fbd1af0c-e5a4-438f-b9d2-bd26c9a71565')
