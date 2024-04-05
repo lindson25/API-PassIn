@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "7100eaf1-a7cf-4a1c-8ff0-e3c85249e554",
+		"name": "API Pass.in",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32839386"
+	},
+	"item": [
+		{
+			"name": "Cria Evento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Rocketseat NLW Unite\",\r\n    \"details\" : \"Aprenda várias tecnologias de forma gratuita e online!\",\r\n    \"maximumAttendees\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes do Evento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events/{idEvento}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						"{idEvento}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Participantes do Evento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events/attendees/{idEvento}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						"attendees",
+						"{idEvento}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Participante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Participante\",\r\n    \"email\" : \"participante@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/events/{idEvento}/attendees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						"{idEvento}",
+						"attendees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Crachá",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/attendees/{idParticipante}/badge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"attendees",
+						"{idParticipante}",
+						"badge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realiza Check-In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"nome\" : \"update\",\r\n    \"email\" : \"teste@update.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/attendees/{idParticipante}/check-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"attendees",
+						"{idParticipante}",
+						"check-in"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
